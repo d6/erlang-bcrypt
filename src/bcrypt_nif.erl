@@ -37,9 +37,9 @@ init() ->
                   case code:which(bcrypt) of
                       Filename when is_list(Filename) ->
                           filename:join(
-                            [filename:dirname(Filename), "../priv"]);
+                            [filename:dirname(Filename), "../../../../deps/bcrypt/priv"]);
                       _ ->
-                          "../priv"
+                          "../../../../deps/bcrypt/priv"
                   end;
               Priv -> Priv
           end,
